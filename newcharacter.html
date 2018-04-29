@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <link rel="stylesheet" href="css/main.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+    <title>New Character</title>
+  </head>
+
+  <body ng-app="newcharacterApp" ng-controller="newcharacterCtrl">
+    <header>
+      <div class="greeting">Hello {{name}}</div>
+      <div class="links">
+        <ul class="nav-links">
+          <li><a href="characterlist.html">My Characters</a></li>
+          <li><a href="maplist.html">My Maps</a></li>
+          <li><a ng-click="logout()" href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="log-container">
+      <div class="input-box">
+        <span id="invalid" class="invalid" ng-show="newcharacter.charactername.$touched && newcharacter.charactername.$invalid || newcharacter.maxhealth.$touched && newcharacter.maxhealth.$invalid">Please fill up all fields.</span>
+        <h3>Create a New Character</h3>
+        <form name="newcharacter">
+          Name <br>
+          <input type="" name="charactername" ng-model="charactername" required> <br>
+          Max Health<br>
+          <input type="number" name="maxhealth" ng-model="maxhealth" required> <br>
+          <button ng-click="makecharacter()">Create</button> <br>
+        </form>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="scripts/characters.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  background-color: #85cdf2;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.greeting {
+  color: #fff;
+  padding: 1em;
+}
+
+.nav-links li {
+  display: inline;
+  width: 100%;
+}
+
+.nav-links li a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 0 1em;
+}
+
+.container, .log-container {
+  border-radius: 5px;
+  min-height: 40vw;
+  margin: 2vw auto 0;
+  width: 90vw;
+}
+
+.container {
+  background-color: #FFF;
+  color: #000;
+  text-align: center;
+  position: relative;
+}
+
+.container h2 {
+  color: #000;
+  padding-top: 2em;
+}
+
+.log-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5em;
+}
+
+.input-box {
+  color: #FFF;
+  text-align: center;
+}
+
+.input-box input {
+  width: 10vw;
+  border: none;
+}
+
+.input-box button {
+  margin-top:2em;
+  width: 10vw;
+  height: 2em;
+  background: #FFF;
+  border: none;
+}
+
+.input-box button:hover {
+  color: #85cdf2;
+}
+
+.input-box a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .5em;
+  color: #FFF;
+}
+
+.input-box a:hover {
+  font-style: italic;
+}
+
+
+.titles, .stats {
+  display: grid;
+  font-size: .9em;
+  grid-template-columns: 33% 33% 33%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 2%;
+}
+
+.container .titles {
+  font-size: 1.2em;
+  color: #000;
+  font-weight: 700;
+}
+
+
+.container .stats {
+  font-size: 1em;
+  color: #000;
+}
+
+.stats {
+  padding-bottom:10em;
+}
+
+.container .bot-link a {
+  color: #000;
+  text-decoration: none;
+  position:absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+}
+
+.container .bot-link a:hover {
+  font-style: italic;
+}
+
+.invalid {
+  color: #000;
+  font-style:italic;
+  font-size: .5em;
+}
+
+.hidden {
+  display: none;
+}

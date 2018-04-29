@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <link rel="stylesheet" href="css/main.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+    <title>Register</title>
+  </head>
+
+  <body>
+    <div class="log-container" ng-app="registerApp" ng-controller="registerCtrl">
+      <div class="input-box">
+        <span id="invalid" class="invalid" ng-show="loginform.email.$touched && loginform.email.$invalid || loginform.firstname.$touched && loginform.firstname.$invalid || loginform.password.$touched && loginform.password.$invalid">Please fill up all fields.</span>
+        <form name="loginform">
+          Email<br>
+          <input name="email" ng-model='email' required> <br>
+
+          First Name<br>
+          <input name="firstname" type="" ng-model='firstname' required> <br>
+
+          Password <br>
+          <input name="password" type="password" ng-model='password' required> <br>
+          <button ng-click="register()">Register</button> <br>
+        </form>
+        <a href="index.html">Login</a>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="scripts/loginregister.js"></script>
+</html>

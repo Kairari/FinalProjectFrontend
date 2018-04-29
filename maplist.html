@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <link rel="stylesheet" href="css/main.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+    <title>Map List</title>
+  </head>
+
+  <body ng-app="mapApp" ng-controller="mapCtrl">
+    <header>
+      <div class="greeting">Hello {{name}}</div>
+      <div class="links">
+        <ul class="nav-links">
+          <li><a href="characterlist.html">My Characters</a></li>
+          <li><a href="maplist.html">My Maps</a></li>
+          <li><a ng-click="logout()" href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+        <h2>Your Maps</h2>
+
+        <div class="titles">
+          <div class="title">Map Name</div>
+          <div class="title">Map Rows</div>
+          <div class="title">Map Columns</div>
+        </div>
+        <div class="maps" ng-if="mapscount!=0" ng-repeat="map in maps">
+          <div >
+            <div class="stats">
+              <div class="stat">{{map.name}}</div>
+              <div class="stat">{{map.map_rows}}</div>
+              <div class="stat">{{map.map_columns}}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-link"><a href="newmap.html">New Map</a></div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="scripts/map.js"></script>
+  </body>
+</html>
